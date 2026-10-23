@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabella Semplice</title>
+</head>
+  <body>
+
+    <h3>Inserisci i dati:</h3>
+    <input type="text" id="nome" placeholder="Nome"><br><br>
+    <input type="text" id="cognome" placeholder="Cognome"><br><br>
+    <input type="text" id="indirizzo" placeholder="Indirizzo"><br><br>
+    <input type="text" id="citta" placeholder="Città"><br><br>
+    <input type="number" id="eta" placeholder="Età"><br><br>
+    
+    <button onclick="aggiungiDati()">Aggiungi</button>
+
+    <br><br>
+
+    <table id="miaTabella" border="1">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Cognome</th>
+                <th>Indirizzo</th>
+                <th>Città</th>
+                <th>Età</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <script>
+        function aggiungiDati() {
+            var tabella = document.getElementById("miaTabella");
+
+            var nuovaRiga = tabella.insertRow(-1);
+
+            nuovaRiga.insertCell(0).innerText = document.getElementById("nome").value;
+            nuovaRiga.insertCell(1).innerText = document.getElementById("cognome").value;
+            nuovaRiga.insertCell(2).innerText = document.getElementById("indirizzo").value;
+            nuovaRiga.insertCell(3).innerText = document.getElementById("citta").value;
+            nuovaRiga.insertCell(4).innerText = document.getElementById("eta").value;
+
+            document.getElementById("nome").value = "";
+            document.getElementById("cognome").value = "";
+            document.getElementById("indirizzo").value = "";
+            document.getElementById("citta").value = "";
+            document.getElementById("eta").value = "";
+        }
+    </script>
+
+</body>
