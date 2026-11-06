@@ -52,10 +52,12 @@
     if (op === '/' && b === 0) return out.textContent = "Impossibile div per 0!";
 
     const operazioni = { '+': a + b, '-': a - b, '*': a * b, '/': a / b };
-    out.textContent = "Risultato: " + Math.round(operazioni[op] * 10000) / 10000;
+    out.textContent = "Risultato: " + operazioni[op];
   }
 </script>
 
 </body>
 </html>
+
+
 
