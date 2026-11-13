@@ -49,7 +49,7 @@
 
     if (isNaN(a) || isNaN(b)) return out.textContent = "Inserisci due numeri!";
     if (!op) return out.textContent = "Scegli un'operazione!";
-    if (op === '/' && b === 0) return out.textContent = "Impossibile div per 0!";
+    if (op == '/' && b == 0) return out.textContent = "Impossibile div per 0!";
 
     const operazioni = { '+': a + b, '-': a - b, '*': a * b, '/': a / b };
     out.textContent = "Risultato: " + operazioni[op];
